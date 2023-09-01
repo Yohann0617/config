@@ -63,6 +63,12 @@ iplocation.io
 www.who.int
 www.wto.org
 ```
+
+## 优选ip
+```
+104.16.160.146
+```
+
 ## 其他worker.js
 
 - [https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js](https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js)
