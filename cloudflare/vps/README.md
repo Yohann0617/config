@@ -8,7 +8,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
 
 ### docker安装x-ui
-参考链接：[https://hub.docker.com/r/enwaiax/x-ui](https://hub.docker.com/r/enwaiax/x-ui)
+参考链接：
+- [https://hub.docker.com/r/enwaiax/x-ui](https://hub.docker.com/r/enwaiax/x-ui)
+- [https://www.hundun.live/?p=174](https://www.hundun.live/?p=174)
 
 ```bash
 # 安装docker
