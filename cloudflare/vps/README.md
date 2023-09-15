@@ -8,6 +8,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
 
 ### docker安装x-ui
+参考链接：[https://iii80.com/?action=show&id=1092](https://iii80.com/?action=show&id=1092)
 
 ```bash
 # 安装docker
@@ -20,7 +21,7 @@ docker run -itd --network=host \
     -v $PWD/db/:/etc/x-ui/ \
     -v $PWD/cert/:/root/cert/ \
     --name x-ui --restart=unless-stopped \
-    enwaiax/x-ui:latest
+    enwaiax/x-ui:alpha-zh
  
 # Build 自己的镜像 
 docker build -t x-ui .
