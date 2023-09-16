@@ -28,7 +28,14 @@ docker run -itd --network=host \
     -v $PWD/cert/:/root/cert/ \
     --name x-ui --restart=unless-stopped \
     enwaiax/x-ui:alpha-zh
- 
+
+# 自己搭建的
+docker run -itd --network=host \
+    -v $PWD/db/:/etc/x-ui/ \
+    -v $PWD/cert/:/root/cert/ \
+    --name x-ui --restart=unless-stopped \
+	yohannfan/yohann-x-ui
+
 ```
 ```bash
 # 将容器内容导出为压缩包 x-ui为容器名
