@@ -29,8 +29,47 @@ docker run -itd --network=host \
     --name x-ui --restart=unless-stopped \
     enwaiax/x-ui:alpha-zh
  
-# Build 自己的镜像 
-docker build -t x-ui .
+```
+```bash
+# 将容器内容导出为压缩包 x-ui为容器名
+docker export -o container_snapshot.tar x-ui
+
+vim Dockerfile
+
+# 使用一个适当的基础镜像
+# FROM ubuntu:20.04
+FROM centos:7
+
+# 复制导出的容器快照到镜像中
+COPY container_snapshot.tar /
+
+# 创建一个可写的目录，用于解压文件
+RUN mkdir /data
+
+# 解压快照文件
+RUN tar -xf /container_snapshot.tar -C /data
+
+# 其他构建步骤
+# ...
+
+# 清理临时文件
+RUN rm /container_snapshot.tar
+
+# 定义容器启动命令或入口点
+CMD ["/bin/bash"]
+
+
+# 构建镜像
+docker build -t yohann-x-ui .
+
+# 登录docker hub
+docker login
+
+# 打标签
+docker tag yohann-x-ui:latest yohannfan/yohann-x-ui_repository:1.0
+
+# 上传docker hub
+docker push yohannfan/yohann-x-ui_repository:1.0
 ```
 
 ## 测试是否支持chatgpt等
