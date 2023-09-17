@@ -245,7 +245,6 @@ systemctl enable hysteria-server.service
 #查看日志
 journalctl -u hysteria-server.service
 ```
-Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://bulianglin.com/g/aHR0cHM6Ly9naXRodWIuY29tL2FwZXJuZXQvaHlzdGVyaWEvcmVsZWFzZXM)
 
 服务器配置文件：
 ```yaml
@@ -274,6 +273,8 @@ masquerade:
     rewriteHost: true
 EOF
 ```
+Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://bulianglin.com/g/aHR0cHM6Ly9naXRodWIuY29tL2FwZXJuZXQvaHlzdGVyaWEvcmVsZWFzZXM)
+
 v2rayN配置文件：
 ```yaml
 server: 207.148.75.108:443
