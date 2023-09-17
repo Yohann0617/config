@@ -107,7 +107,7 @@ systemctl disable wg-quick@wgcf --now
 ## 配置代理节点解锁奈非和ChatGPT
 修改`outbounds`中节点即可
 
-```bash
+```json
 {
   "api": {
     "services": [
