@@ -104,3 +104,122 @@ systemctl restart wg-quick@wgcf
 systemctl disable wg-quick@wgcf --now
 ```
 
+## 配置代理节点解锁奈非和ChatGPT
+修改`outbounds`中节点即可
+
+```bash
+{
+  "api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "inbounds": [
+	{
+    "listen": "127.0.0.1",
+    "port": 30000, 
+    "protocol": "socks", 
+    "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+		}
+	}
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+	{
+      "tag": "netflix_proxy",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "kbawssg1.aiopen.cfd",
+            "method": "chacha20",
+            "ota": false,
+            "password": "30c348eb-a17c-4a23-a379-d01a1e47ce25",
+            "port": 443,
+            "level": 1,
+            "flow": ""
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "4-193-105-141.nhost.00cdn.com"
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "0": {
+        "handshake": 10,
+        "connIdle": 100,
+        "uplinkOnly": 2,
+        "downlinkOnly": 3,
+        "statsUserUplink": true,
+        "statsUserDownlink": true,
+        "bufferSize": 10240
+      }
+    },
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    }
+  },
+  "routing": {
+    "rules": [
+	{
+    "type": "field",
+    "outboundTag": "netflix_proxy",
+    "domain": [
+        "geosite:netflix",
+        "geosite:disney",
+		"geosite:openai"
+    ]
+	},
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
+}
+```
+
