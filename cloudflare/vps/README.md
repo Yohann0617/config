@@ -273,7 +273,7 @@ masquerade:
     rewriteHost: true
 EOF
 ```
-Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://bulianglin.com/g/aHR0cHM6Ly9naXRodWIuY29tL2FwZXJuZXQvaHlzdGVyaWEvcmVsZWFzZXM)
+Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://github.com/apernet/hysteria/releases)
 
 v2rayN配置文件：
 ```yaml
