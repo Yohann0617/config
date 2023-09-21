@@ -1,4 +1,13 @@
-[TOC]
+- [安装x-ui](https://github.com/Yohann0617/config/edit/main/cloudflare/vps/README.md#%E5%AE%89%E8%A3%85x-ui)
+  * [脚本一键安装](#------)
+  * [docker安装x-ui](#docker--x-ui)
+- [测试是否支持chatgpt等](#------chatgpt-)
+- [配置WARP](#--warp)
+- [配置代理节点解锁奈非和ChatGPT](#-----------chatgpt)
+- [配置Hysteria 2](#--hysteria-2)
+  * [服务器配置文件：](#--------)
+  * [Hysteria 2下载：](#hysteria-2---)
+  * [v2rayN配置文件：](https://github.com/Yohann0617/config/edit/main/cloudflare/vps/README.md#v2rayn%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
 
 
 
