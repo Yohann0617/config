@@ -193,7 +193,7 @@ systemctl disable wg-quick@wgcf --now
     "domain": [
         "geosite:netflix",
         "geosite:disney",
-		"geosite:openai"
+	"geosite:openai"
     ]
 	},
       {
@@ -277,7 +277,7 @@ Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://github
 
 v2rayN配置文件：
 ```yaml
-server: 207.148.75.108:443
+server: 1.1.1.1:443
 auth: 123456
 
 bandwidth:
@@ -285,7 +285,7 @@ bandwidth:
   down: 100 mbps
   
 tls:
-  sni: a.com
+  sni: bing.com
   insecure: true #使用自签时需要改成true
 
 socks5:
