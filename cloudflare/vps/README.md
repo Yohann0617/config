@@ -106,7 +106,7 @@ systemctl disable wg-quick@wgcf --now
 ```
 
 ## 配置代理节点解锁奈非和ChatGPT
-修改`outbounds`中节点即可。PS：需要自费购买能够解锁的节点
+以下为Xray配置，修改`outbounds`中节点即可。PS：需要自费购买能够解锁的节点
 ```json
 {
   "api": {
