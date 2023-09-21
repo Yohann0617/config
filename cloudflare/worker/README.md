@@ -1,7 +1,7 @@
 - [如何使用](#如何使用)
   - [优选域名](#优选域名)
   - [优选ip](#优选ip)
-  - [其他worker.js](#其他worker.js)
+  - [其他worker](#其他worker)
  
 
 # 如何使用
@@ -75,6 +75,6 @@ www.wto.org
 104.16.160.146
 ```
 
-## 其他worker.js
+## 其他worker
 
 - [https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js](https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js)
