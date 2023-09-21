@@ -52,6 +52,7 @@ docker run -itd --network=host \
     yohannfan/yohann-x-ui:1.0
 
 ```
+以下骚操作，可直接忽略
 ```bash
 # 将容器内容导出为压缩包 x-ui为容器名
 docker export -o container_snapshot.tar x-ui
