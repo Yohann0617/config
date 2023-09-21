@@ -54,11 +54,8 @@ docker run -itd --network=host \
 ```
 以下骚操作，可直接忽略
 ```bash
-# 将容器内容导出为压缩包 x-ui为容器名
-docker export -o container_snapshot.tar x-ui
-
-vim Dockerfile
-
+# 编写Dockerfile
+cat << EOF > $PWD/Dockerfile
 # 使用一个适当的基础镜像
 # FROM ubuntu:20.04
 # FROM centos:7
@@ -70,6 +67,7 @@ FROM enwaiax/x-ui:alpha-zh
 # 定义容器启动命令或入口点
 CMD ["/bin/bash"]
 
+EOF
 
 # 构建镜像
 docker build -t yohann-x-ui .
