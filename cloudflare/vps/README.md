@@ -279,7 +279,7 @@ EOF
 [https://github.com/apernet/hysteria/releases](https://github.com/apernet/hysteria/releases)
 
 ### v2rayN配置文件
-
+PS：yaml格式
 ```yaml
 server: 1.1.1.1:443
 auth: 123456
