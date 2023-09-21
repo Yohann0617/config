@@ -90,7 +90,7 @@ wget -qO- https://github.com/yeahwu/check/raw/main/check.sh | bash
 ```
 
 ## 配置WARP解锁奈非和ChatGPT
-PS:IP会经常变，但是免费
+PS：IP会经常变，但是免费
 ```bash
 # 自动配置 WARP WireGuard 双栈全局网络（所有出站流量走 WARP 网络）
 bash <(curl -fsSL git.io/warp.sh) d
@@ -106,8 +106,7 @@ systemctl disable wg-quick@wgcf --now
 ```
 
 ## 配置代理节点解锁奈非和ChatGPT
-修改`outbounds`中节点即可
-PS：需要自费购买能够解锁的节点
+修改`outbounds`中节点即可。PS：需要自费购买能够解锁的节点
 ```json
 {
   "api": {
