@@ -5,9 +5,9 @@
 - [配置WARP](#配置WARP)
 - [配置代理节点解锁奈非和ChatGPT](#配置代理节点解锁奈非和ChatGPT)
 - [配置Hysteria2](#配置Hysteria2)
-  * [服务器配置文件：](#服务器配置文件：)
-  * [Hysteria2下载：](#Hysteria2下载：)
-  * [v2rayN配置文件：](#v2rayN配置文件：)
+  * [服务器配置文件](#服务器配置文件)
+  * [Hysteria2下载](#Hysteria2下载)
+  * [v2rayN配置文件](#v2rayN配置文件)
 
 
 
@@ -259,7 +259,7 @@ systemctl enable hysteria-server.service
 journalctl -u hysteria-server.service
 ```
 
-### 服务器配置文件：
+### 服务器配置文件
 
 ```yaml
 cat << EOF > /etc/hysteria/config.yaml
@@ -287,11 +287,11 @@ masquerade:
     rewriteHost: true
 EOF
 ```
-### Hysteria2下载：
+### Hysteria2下载
 
 [https://github.com/apernet/hysteria/releases](https://github.com/apernet/hysteria/releases)
 
-### v2rayN配置文件：
+### v2rayN配置文件
 
 ```yaml
 server: 1.1.1.1:443
