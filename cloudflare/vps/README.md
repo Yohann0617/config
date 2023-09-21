@@ -61,22 +61,11 @@ vim Dockerfile
 
 # 使用一个适当的基础镜像
 # FROM ubuntu:20.04
-FROM centos:7
-
-# 复制导出的容器快照到镜像中
-COPY container_snapshot.tar /
-
-# 创建一个可写的目录，用于解压文件
-RUN mkdir /data
-
-# 解压快照文件
-RUN tar -xf /container_snapshot.tar -C /data
+# FROM centos:7
+FROM enwaiax/x-ui:alpha-zh
 
 # 其他构建步骤
 # ...
-
-# 清理临时文件
-RUN rm /container_snapshot.tar
 
 # 定义容器启动命令或入口点
 CMD ["/bin/bash"]
