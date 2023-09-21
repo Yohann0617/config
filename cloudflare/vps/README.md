@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 ## 安装x-ui
 
 ### 脚本一键安装
@@ -246,7 +250,8 @@ systemctl enable hysteria-server.service
 journalctl -u hysteria-server.service
 ```
 
-服务器配置文件：
+### 服务器配置文件：
+
 ```yaml
 cat << EOF > /etc/hysteria/config.yaml
 listen: :443 #监听端口
@@ -273,9 +278,12 @@ masquerade:
     rewriteHost: true
 EOF
 ```
-Hysteria 2下载：[https://github.com/apernet/hysteria/releases](https://github.com/apernet/hysteria/releases)
+### Hysteria 2下载：
 
-v2rayN配置文件：
+[https://github.com/apernet/hysteria/releases](https://github.com/apernet/hysteria/releases)
+
+### v2rayN配置文件：
+
 ```yaml
 server: 1.1.1.1:443
 auth: 123456
