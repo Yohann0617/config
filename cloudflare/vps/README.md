@@ -2,7 +2,7 @@
   * [脚本一键安装](#脚本一键安装)
   * [docker安装x-ui](#docker安装x-ui)
 - [测试是否支持chatgpt等](#测试是否支持chatgpt等)
-- [配置WARP](#配置WARP)
+- [配置WARP解锁奈非和ChatGPT](#配置WARP解锁奈非和ChatGPT)
 - [配置代理节点解锁奈非和ChatGPT](#配置代理节点解锁奈非和ChatGPT)
 - [配置Hysteria2](#配置Hysteria2)
   * [服务器配置文件](#服务器配置文件)
@@ -89,7 +89,7 @@ docker push yohannfan/yohann-x-ui_repository:1.0
 wget -qO- https://github.com/yeahwu/check/raw/main/check.sh | bash
 ```
 
-## 配置WARP
+## 配置WARP解锁奈非和ChatGPT
 
 ```bash
 # 自动配置 WARP WireGuard 双栈全局网络（所有出站流量走 WARP 网络）
