@@ -83,9 +83,9 @@ docker push yohannfan/yohann-x-ui_repository:1.0
 ```
 
 ## 测试是否支持chatgpt等
-
+一键测试Linux服务器IP是否支持解锁Netflix、TikTok、ChatGPT等脚本
 ```bash
-# 一键测试Linux服务器IP是否支持解锁Netflix、TikTok、ChatGPT脚本
+bash <(curl -L -s check.unlock.media)
 wget -qO- https://github.com/yeahwu/check/raw/main/check.sh | bash
 ```
 
