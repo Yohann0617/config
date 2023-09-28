@@ -16,7 +16,7 @@
 ### 脚本一键安装
 
 ```bash
-# 脚本一键安装
+# 脚本一键安装（推荐）
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 
 # 其他脚本
