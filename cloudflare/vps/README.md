@@ -118,15 +118,15 @@ systemctl disable wg-quick@wgcf --now
     "tag": "api"
   },
   "inbounds": [
-	{
-    "listen": "127.0.0.1",
-    "port": 30000, 
-    "protocol": "socks", 
-    "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-		}
-	}
+	  {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "tag": "api"
+	  }
   ],
   "outbounds": [
     {
