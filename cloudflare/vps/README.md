@@ -90,7 +90,7 @@ wget -qO- https://github.com/yeahwu/check/raw/main/check.sh | bash
 ```
 
 ## 配置WARP解锁奈非和ChatGPT
-PS：有效期大概几天，ip如果被墙则重启WARP WireGuard网络接口，每重启一次IP地址就会变，虽然麻烦但是免费
+PS：每隔一段时间会自动换一次ip地址，虽然麻烦但是免费
 ```bash
 # 自动配置 WARP WireGuard 双栈全局网络（所有出站流量走 WARP 网络）
 bash <(curl -fsSL git.io/warp.sh) d
