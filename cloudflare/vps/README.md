@@ -395,11 +395,12 @@ CMD ["apt-get","install","-y","ca-certificates"]
 CMD ["/app/tgState"]
 EOF
 ```
-下载源码后编译：
-- git clone https://github.com/csznet/tgState.git
-- cd tgState
-- go build
-
+或者下载源码，根据需要自行修改后编译：
+```bash
+git clone https://github.com/csznet/tgState.git
+cd tgState
+go build
+```
 ```bash
 cat << EOF > $PWD/Dockerfile
 # 使用官方的 Ubuntu 基础镜像
