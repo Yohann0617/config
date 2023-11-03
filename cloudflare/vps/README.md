@@ -419,8 +419,8 @@ docker push yohannfan/yohann-netdisc:1.0
 docker run -d -p 8088:8088 \
 --network=host \
 --name yohannnetdisc \
--e TOKEN=6003270639:AAHfqgqdL6edb-wl9RcIzJYiyZJFcVX-gRM \
--e CHANNEL=@yohannnetdisc \
+-e TOKEN=xxx \
+-e CHANNEL=@xxx \
 -e MODE=pan \
 yohann-netdisc:latest
 ```
@@ -431,8 +431,8 @@ yohann-netdisc:latest
 docker run -d -p 8088:8088 \
 --network=host \
 --name yohannnetdisc \
--e TOKEN=6003270639:AAHfqgqdL6edb-wl9RcIzJYiyZJFcVX-gRM \
--e CHANNEL=@yohannnetdisc \
+-e TOKEN=xxx \
+-e CHANNEL=xxx \
 -e MODE=pan \
 yohannfan/yohann-netdisc:1.0
 ```
