@@ -403,7 +403,7 @@ go build
 ```
 ```bash
 cat << EOF > $PWD/Dockerfile
-# 使用官方的 Ubuntu 基础镜像
+# 使用一个适当的基础镜像
 FROM csznet/tgstate:latest
 
 # 将编译好的 server 和 client 二进制文件复制到容器中
