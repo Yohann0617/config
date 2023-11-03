@@ -395,6 +395,31 @@ CMD ["apt-get","install","-y","ca-certificates"]
 CMD ["/app/tgState"]
 EOF
 ```
+下载源码后编译：
+- git clone https://github.com/csznet/tgState.git
+- cd tgState
+- go build
+
+```bash
+cat << EOF > $PWD/Dockerfile
+# 使用官方的 Ubuntu 基础镜像
+FROM csznet/tgstate:latest
+
+# 将编译好的 server 和 client 二进制文件复制到容器中
+COPY tgState /app/tgState
+
+# 设置工作目录
+WORKDIR /app
+
+# 设置暴露的端口
+EXPOSE 8088
+
+# 定义容器启动命令或入口点
+CMD ["apt-get","update"]
+CMD ["apt-get","install","-y","ca-certificates"]
+CMD ["/app/tgState"]
+EOF
+```
 
 ### 构建镜像
 
