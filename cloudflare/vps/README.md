@@ -8,11 +8,6 @@
   * [服务器配置文件](#服务器配置文件)
   * [Hysteria2下载](#Hysteria2下载)
   * [v2rayN配置文件](#v2rayN配置文件)
-- [Docker构建个人网盘镜像](#Docker构建个人网盘镜像)
-  * [1.创建Dockerfile](#创建Dockerfile)
-  * [2.构建镜像](#构建镜像)
-  * [3.运行容器](#运行容器)
-
 
 ## 安装x-ui
 
@@ -377,88 +372,4 @@ socks5:
   listen: 127.0.0.1:1080
 http:
   listen: 127.0.0.1:8080
-```
-
-## Docker构建个人网盘镜像
-利用Telegram接口，无限容量，不限制文件格式，但不支持上传大文件。
-原作者地址：[https://github.com/csznet/tgState](https://github.com/csznet/tgState)
-### 创建Dockerfile
-
-```bash
-cat << EOF > $PWD/Dockerfile
-# 使用一个适当的基础镜像
-FROM csznet/tgstate:latest
-
-# 定义容器启动命令或入口点
-CMD ["apt-get","update"]
-CMD ["apt-get","install","-y","ca-certificates"]
-CMD ["/app/tgState"]
-EOF
-```
-或者下载源码，根据需要自行修改后编译：
-```bash
-git clone https://github.com/csznet/tgState.git
-cd tgState
-go build
-```
-```bash
-cat << EOF > $PWD/Dockerfile
-# 使用一个适当的基础镜像
-FROM csznet/tgstate:latest
-
-# 将编译好的 server 和 client 二进制文件复制到容器中
-COPY tgState /app/tgState
-
-# 设置工作目录
-WORKDIR /app
-
-# 设置暴露的端口
-EXPOSE 8088
-
-# 定义容器启动命令或入口点
-CMD ["apt-get","update"]
-CMD ["apt-get","install","-y","ca-certificates"]
-CMD ["/app/tgState"]
-EOF
-```
-
-### 构建镜像
-
-```bash
-# 构建镜像
-docker build -t yohann-netdisc .
-
-# 以下操作可省略。。。
-# 登录个人docker
-docker login
-# 打标签
-docker tag yohann-netdisc:latest yohannfan/yohann-netdisc:1.0
-# 上传到个人docker镜像仓库
-docker push yohannfan/yohann-netdisc:1.0
-```
-
-### 运行容器
-
-本地镜像启动：
-
-```bash
-docker run -d -p 8088:8088 \
---network=host \
---name yohannnetdisc \
--e TOKEN=xxx \
--e CHANNEL=@xxx \
--e MODE=pan \
-yohann-netdisc:latest
-```
-
-个人镜像仓库镜像启动：
-
-```bash
-docker run -d -p 8088:8088 \
---network=host \
---name yohannnetdisc \
--e TOKEN=xxx \
--e CHANNEL=xxx \
--e MODE=pan \
-yohannfan/yohann-netdisc:1.0
 ```
