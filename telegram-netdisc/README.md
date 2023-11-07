@@ -1,6 +1,3 @@
-# private
-自用好东西
-
 - [Docker构建个人网盘镜像](#Docker构建个人网盘镜像)
   - [1.创建Dockerfile](#创建Dockerfile)
   - [2.构建镜像](#构建镜像)
