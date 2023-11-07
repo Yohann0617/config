@@ -25,7 +25,7 @@ COPY ca-certificates.deb /tmp/ca-certificates.deb
 RUN dpkg -i /tmp/openssl.deb && apt-get install -f
 RUN dpkg -i /tmp/ca-certificates.deb && apt-get install -f
 
-# 将编译好的 server 和 client 二进制文件复制到容器中
+# 将编译好的二进制文件复制到容器中
 COPY tgstate /app/tgState
 
 # 设置工作目录
