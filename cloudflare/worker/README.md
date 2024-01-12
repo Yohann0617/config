@@ -9,6 +9,9 @@
 自行更换`uuid`和`proxyIp`
 
 ## 优选域名
+参考：
+[https://github.com/yonggekkk/Cloudflare-workers-pages-vless](https://github.com/yonggekkk/Cloudflare-workers-pages-vless)
+
 ```
 time.cloudflare.com
 shopify.com
