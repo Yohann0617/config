@@ -1,4 +1,4 @@
-- [部署XBoard+XrayR](#部署XBoard&&XrayR)
+- [部署XBoard+XrayR](#部署XBoard和XrayR)
   * [安装Docker-compose](#安装Docker-compose)
   * [安装XrayR](#安装XrayR)
   * [安装XBoard](#安装XBoard)
@@ -13,7 +13,9 @@
   * [Hysteria2下载](#Hysteria2下载)
   * [v2rayN配置文件](#v2rayN配置文件)
 
-## 部署XBoard && XrayR
+> 注意：XBoard+XrayR（机场） 和 x-ui（自用） 两者选一个就可以了
+
+## 部署XBoard和XrayR
 
 ### 安装Docker-compose
 
