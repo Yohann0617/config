@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 ### 安装XrayR
-
+获取最新镜像（非原本）地址：[https://github.com/wyx2685/XrayR/pkgs/container/xrayr](https://github.com/wyx2685/XrayR/pkgs/container/xrayr)
 ```bash
 # 1、Docker-compose 安装XrayR
 git clone https://github.com/XrayR-project/XrayR-release
@@ -47,7 +47,7 @@ docker-compose up -d
 ```
 
 ### 安装XBoard
-
+项目地址：[https://github.com/cedar2025/Xboard](https://github.com/cedar2025/Xboard)
 ```bash
 # 1、安装Xboard，获取Docker compose 文件
 git clone -b  docker-compose --depth 1 https://github.com/cedar2025/Xboard
