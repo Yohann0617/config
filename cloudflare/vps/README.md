@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 ### 安装XrayR
-获取最新镜像（非原本）地址：[https://github.com/wyx2685/XrayR/pkgs/container/xrayr](https://github.com/wyx2685/XrayR/pkgs/container/xrayr)
+获取最新镜像（非原版）地址：[https://github.com/wyx2685/XrayR/pkgs/container/xrayr](https://github.com/wyx2685/XrayR/pkgs/container/xrayr)
 ```bash
 # 1、Docker-compose 安装XrayR
 git clone https://github.com/XrayR-project/XrayR-release
