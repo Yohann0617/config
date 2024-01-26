@@ -1,4 +1,4 @@
-- [部署XBoard+XrayR](#部署XBoard+XrayR)
+- [部署XBoard+XrayR](#部署XBoard&&XrayR)
   * [安装Docker-compose](#安装Docker-compose)
   * [安装XrayR](#安装XrayR)
   * [安装XBoard](#安装XBoard)
@@ -13,11 +13,12 @@
   * [Hysteria2下载](#Hysteria2下载)
   * [v2rayN配置文件](#v2rayN配置文件)
 
-## 部署XBoard+XrayR
+## 部署XBoard && XrayR
 
 ### 安装Docker-compose
 
 ```bash
+# 如已安装请忽略
 curl -fsSL https://get.docker.com | bash -s docker
 curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
