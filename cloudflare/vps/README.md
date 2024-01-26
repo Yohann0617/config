@@ -1,3 +1,7 @@
+- [部署XBoard+XrayR](#部署XBoard+XrayR)
+  * [安装Docker-compose](#安装Docker-compose)
+  * [安装XrayR](#安装XrayR)
+  * [安装XBoard](#安装XBoard)
 - [安装x-ui](#安装x-ui)
   * [脚本一键安装](#脚本一键安装)
   * [docker安装x-ui](#docker安装x-ui)
@@ -8,6 +12,63 @@
   * [服务器配置文件](#服务器配置文件)
   * [Hysteria2下载](#Hysteria2下载)
   * [v2rayN配置文件](#v2rayN配置文件)
+
+## 部署XBoard+XrayR
+
+### 安装Docker-compose
+
+```bash
+curl -fsSL https://get.docker.com | bash -s docker
+curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+```
+
+### 安装XrayR
+
+```bash
+# 1、Docker-compose 安装XrayR
+git clone https://github.com/XrayR-project/XrayR-release
+cd XrayR-release
+# 2、修改docker-compose.yml中的xrayr镜像地址为：ghcr.io/wyx2685/xrayr:v0.9.2-20240112，获取最新镜像地址：https://github.com/wyx2685/XrayR/pkgs/container/xrayr
+...
+# 3、编辑配置文件：config.yml
+...
+
+# 4、启动docker
+docker-compose up -d
+
+# 更新xrayr，更新、删除容器并重启。更新软件后config.yml不会被更新覆盖。
+cd XrayR-release
+docker-compose pull
+docker-compose up -d
+```
+
+### 安装XBoard
+
+```bash
+# 1、安装Xboard，获取Docker compose 文件
+git clone -b  docker-compose --depth 1 https://github.com/cedar2025/Xboard
+cd Xboard
+
+# 2、执行数据库安装命令，选择 启用sqlite 和 Docker内置的Redis，执行这条命令之后，会返回你的后台地址和管理员账号密码（你需要记录下来），你需要执行下面的 启动xborad 步骤之后才能访问后台
+docker compose run -it --rm xboard php artisan xboard:install
+
+# 3、启动Xboard
+docker compose up -d
+
+# 4、访问站点，网站地址: http://你的IP:7001/
+
+# 修改版本
+cd Xboard
+vi docker-compose.yaml
+
+# 更新数据库（可以执行多次都是安全的）
+cd Xboard
+docker compose pull
+docker compose down
+docker compose run -it --rm xboard php artisan xboard:update
+docker compose up -d
+```
 
 ## 安装x-ui
 
