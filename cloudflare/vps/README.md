@@ -59,7 +59,7 @@ docker compose up -d
 # 1、Docker-compose 安装XrayR
 git clone https://github.com/XrayR-project/XrayR-release
 cd XrayR-release
-# 2、修改docker-compose.yml中的xrayr镜像地址为：ghcr.io/wyx2685/xrayr:latest，获取最新镜像地址：https://github.com/wyx2685/XrayR/pkgs/container/xrayr
+# 2、修改docker-compose.yml中的xrayr镜像地址为：ghcr.io/wyx2685/xrayr:master，获取最新镜像地址：https://github.com/wyx2685/XrayR/pkgs/container/xrayr
 ...
 # 3、编辑配置文件：config.yml
 ...
