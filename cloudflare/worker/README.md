@@ -86,6 +86,13 @@ www.wto.org
 154.194.2.12
 ```
 
+## 优选proxyip
+```
+cdn.docker.mom
+cdn-all.xn--b6gac.eu.org
+cdn-all.xijingping.link
+```
+
 ## 其他worker
 
 - [https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js](https://github.com/3Kmfi6HP/EDtunnel/blob/vless/_worker.js)
