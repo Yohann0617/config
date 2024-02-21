@@ -88,7 +88,6 @@ www.wto.org
 
 ## 优选proxyip
 ```
-cdn.docker.mom
 cdn-all.xn--b6gac.eu.org
 cdn-all.xijingping.link
 ```
