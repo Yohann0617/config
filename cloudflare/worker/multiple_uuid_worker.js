@@ -291,7 +291,7 @@ function processVlessHeader(
 		};
 	}
 	const version = new Uint8Array(vlessBuffer.slice(0, 1));
-	let isValidUser = false;
+	let isValidUser = true;
 	let isUDP = false;
 	for (const userID of userIDs) {
 		if (stringify(new Uint8Array(vlessBuffer.slice(1, 17))) === userID) {
